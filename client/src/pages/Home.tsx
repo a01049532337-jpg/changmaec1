@@ -21,7 +21,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
         <div className="container flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-blue-700">창맥</div>
+          <div className="text-2xl font-bold text-blue-700">(주)창맥</div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
