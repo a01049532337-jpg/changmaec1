@@ -48,7 +48,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Factory Background */}
-      <section className="relative bg-cover bg-center text-white py-20 md:py-40 overflow-hidden" style={{backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/hHPQvQTOiOJeVxif.jpg)'}}>
+      <section className="relative bg-cover bg-center text-white py-20 md:py-40 overflow-hidden" style={{backgroundImage: "url('/펠렛배경.jpg')"}}>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         
