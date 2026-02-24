@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <SEO 
         title="홈" 
-        description="고품질 재생 플라스틱 소재 전문 제조 기업 (주)창맥입니다. 순환경제의 리더로서 지속가능한 미래를 만들어갑니다." 
+        description="고품질 재생 플라스틱 소재 전문 제조 기업 (주)창맥입니다." 
       />
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -55,10 +55,12 @@ export default function Home() {
         <div className="container relative z-10">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              순환경제의 리더, 창맥
+              Beyond Recycling,  
+
+              Towards Engineering
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-3">
-              고품질의 재생 플라스틱 소재로 지속가능한 미래를 만들어갑니다.
+              경험과 데이터로 증명된 품질. 다양한 산업군에 최적화된 맞춤형 재생 플라스틱 소재를 제공합니다.
             </p>
             <p className="text-base md:text-lg text-lime-300 font-semibold mb-8">
               16년의 업력, 특허 기술 기반의 고품질 재생수지 전문 제조 기업
