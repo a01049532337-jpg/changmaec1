@@ -85,14 +85,14 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-slate-50">
         <div className="container px-4 mx-auto max-w-7xl">
           
-          {/* 섹션 헤더 : 무게감 있고 직관적인 타이틀 */}
+          {/* 섹션 헤더 */}
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-blue-800 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
               Core Competencies
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
               데이터로 증명하는<br className="md:hidden"/>
-              <span className="text-blue-700"> 솔루션</span>
+              <span className="text-blue-700"> 품질 기준</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed md:px-10 font-medium">
               독자적인 특허 공법과 철저한 데이터 기반 품질 관리 시스템으로 신재(Virgin)급 물성을 구현합니다.
@@ -109,7 +109,6 @@ export default function Home() {
               <p className="text-slate-600 mb-10 leading-relaxed">
                 TPE 같은 충격 보강제를 완벽한 비율로 배합하여, 미세 균열을 막고 자동차 부품 수준의 강력한 <strong className="text-blue-800">Izod 충격 강도</strong>를 구현합니다.
               </p>
-              {/* 하단 인증 정보 영역 : 깔끔하고 전문적인 배치 */}
               <div className="pt-6 border-t border-slate-100 flex items-center text-slate-500 text-sm font-medium">
                 <FileText className="w-5 h-5 mr-3 text-blue-600/70" />
                 <span>대한민국 특허 등록 제 10-2021-0165852호</span>
@@ -138,7 +137,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Data-Driven 품질 관리</h3>
               <p className="text-slate-600 mb-10 leading-relaxed">
-                공장에서 나가는 모든 펠릿은 자체 연구실을 거칩니다. 수분율부터 인장강도까지 <strong className="text-blue-800">철저하게 데이터를 추출</strong>하여 통과된 제품만 납품합니다.
+                공장에서 나가는 모든 펠렛은 자체 연구실을 거칩니다. 수분율부터 인장강도까지 <strong className="text-blue-800">철저하게 데이터를 추출</strong>하여 통과된 제품만 납품합니다.
               </p>
               <div className="pt-6 border-t border-slate-100 flex items-center text-blue-800 text-sm font-bold">
                 <Database className="w-5 h-5 mr-3" />
