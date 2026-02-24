@@ -91,7 +91,7 @@ export default function Home() {
         데이터로 증명하는 품질 기준
       </h2>
       <p className="text-lg text-slate-600 leading-relaxed md:px-10 font-medium">
-        독자적인 특허 공법과 철저한 데이터 기반 품질 관리 시스템으로 신재(Virgin)급 물성을 구현합니다.
+        데이터 기반 품질 관리 시스템으로 신재(Virgin)급 물성을 구현합니다.
       </p>
     </div>
 
