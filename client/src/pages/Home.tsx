@@ -62,9 +62,6 @@ export default function Home() {
             <p className="text-lg md:text-xl text-blue-100 mb-3">
               경험과 데이터로 증명된 품질. 다양한 산업군에 최적화된 맞춤형 재생 플라스틱 소재를 제공합니다.
             </p>
-            <p className="text-base md:text-lg text-lime-300 font-semibold mb-8">
-              16년의 업력, 특허 기술 기반의 고품질 재생수지 전문 제조 기업
-            </p>
             <div className="flex gap-4">
               <a href="/products">
                 <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500">
