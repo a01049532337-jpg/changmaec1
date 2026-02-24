@@ -56,7 +56,7 @@ export default function Home() {
           <div className="space-y-6">
             <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
               Beyond Recycling,
-              <span className="block mt-4 text-4xl md:text-6xl text-gray-300 font-light">
+              <span className="block mt-4 text-4xl md:text-6xl text-white font-light">
                 Towards Engineering.
               </span>
             </h1>
@@ -68,12 +68,12 @@ export default function Home() {
         </div>
             <div className="container relative z-10 mt-auto pb-16 flex flex-col sm:flex-row gap-4">
               <a href="/products" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-48 h-14 bg-white text-gray-900 hover:bg-gray-200 border-none font-bold text-lg shadow-lg transition-colors">
+                <Button className="w-full sm:w-48 h-14 flex items-center justify-center bg-white text-gray-900 hover:bg-gray-200 border border-white font-bold text-lg shadow-lg transition-colors">
                   제품 보기
                 </Button>
               </a>
               <a href="/about" className="w-full sm:w-auto">
-                <Button variant="outline" classnName="w-full sm:w-48 h-14 border-white/60 text-white hover:bg-white/10 hover:border-white font-bold text-lg transition-all">
+                <Button variant="outline" classnName="w-full sm:w-48 h-14 flex items-center justify-center border border-white/60 text-white hover:bg-white/10 hover:border-white font-bold text-lg transition-all">
                   회사소개 <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
