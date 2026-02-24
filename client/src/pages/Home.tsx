@@ -53,16 +53,17 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="space-y-4">
+            <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
               Beyond Recycling,  
 
               Towards Engineering
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-3">
+            <p className="text-xl text-slate-200 font-light leading-relaxed max-w-xl">
               경험과 데이터로 증명된 품질. 다양한 산업군에 최적화된 맞춤형 재생 플라스틱 소재를 제공합니다.
             </p>
-            <div className="flex gap-4">
+          </div>
+            <div className="flex gap-4 pt-4">
               <a href="/products">
                 <Button className="border-white text-white hover:bg-white/10">
                   제품 보기
