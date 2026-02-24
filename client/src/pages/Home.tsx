@@ -80,7 +80,7 @@ export default function Home() {
             </div>
         
           </section>
-
+    {/* Core Competencies Section */}
       <section className="py-24 md:py-32 bg-slate-50">
   <div className="container px-4 mx-auto max-w-7xl">
     <div className="text-center max-w-3xl mx-auto mb-20">
