@@ -64,7 +64,7 @@ export default function Home() {
             </p>
             <div className="flex gap-4">
               <a href="/products">
-                <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500">
+                <Button className="border-white text-white hover:bg-white/10">
                   제품 보기
                 </Button>
               </a>
