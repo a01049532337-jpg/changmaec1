@@ -88,11 +88,10 @@ export default function Home() {
               Core Competencies
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
-              특허와 데이터로 증명하는<br className="md:hidden"/>
-              <span className="text-blue-700"> 타협 없는 품질 기준</span>
+              데이터로 증명하는 타협 없는 품질 기준</span>
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed md:px-10 font-medium">
-              경험과 감에 의존하지 않습니다. 독자적인 특허 공법과 철저한 데이터 기반 품질 관리 시스템으로 신재(Virgin)급 물성을 완벽하게 구현합니다.
+             독자적인 특허 공법과 철저한 데이터 기반 품질 관리 시스템으로 신재(Virgin)급 물성을 구현합니다.
             </p>
           </div>
 
@@ -103,7 +102,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">고충격 물성 복원 기술</h3>
               <p className="text-slate-600 mb-10 leading-relaxed">
-                TPE 같은 충격 보강제를 완벽한 비율로 배합하여, 미세 균열을 막고 자동차 부품 수준의 강력한 <strong className="text-blue-800">Izod 충격 강도</strong>를 구현합니다.
+                TPE 같은 충격 보강제를 완벽한 비율로 배합하여, 미세 균열을 막고 자동차 부품 수준의 강력한 Izod 충격 강도를 구현합니다.
               </p>
               <div className="pt-6 border-t border-slate-100 flex items-center text-slate-500 text-sm font-medium">
                 <CheckCircle className="w-5 h-5 mr-3 text-blue-600/70" />
@@ -117,7 +116,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">혼합 수지 상용화·안정화</h3>
               <p className="text-slate-600 mb-10 leading-relaxed">
-                서로 다른 플라스틱이 섞여도 열안정제와 상용화제를 정밀하게 제어해, 생산 시 <strong className="text-blue-800">MFI(용융지수)</strong>가 널뛰지 않고 일정하게 유지됩니다.
+                서로 다른 플라스틱이 섞여도 열안정제와 상용화제를 정밀하게 제어해, 생산 시 MFI(용융지수)가 널뛰지 않고 일정하게 유지됩니다.
               </p>
               <div className="pt-6 border-t border-slate-100 flex items-center text-slate-500 text-sm font-medium">
                 <CheckCircle className="w-5 h-5 mr-3 text-blue-600/70" />
@@ -131,10 +130,10 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Data-Driven 품질 관리</h3>
               <p className="text-slate-600 mb-10 leading-relaxed">
-                공장에서 나가는 모든 펠릿은 자체 연구실을 거칩니다. 수분율부터 인장강도까지 <strong className="text-blue-800">철저하게 데이터를 추출</strong>하여 통과된 제품만 납품합니다.
+                공장에서 나가는 모든 펠릿은 자체 연구실을 거칩니다. 수분율부터 인장강도까지 철저하게 데이터를 추출하여 통과된 제품만 납품합니다.
               </p>
               <div className="pt-6 border-t border-slate-100 flex items-center text-blue-800 text-sm font-bold">
-                <CheckCircle className="w-5 h-5 mr-3" />
+                <CheckCircle className="w-5 h-5 mr-3 text-blue-600/70" />
                 <span>자체 기업부설연구소 데이터 검증 시스템</span>
               </div>
             </div>
