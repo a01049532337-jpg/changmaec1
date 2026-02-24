@@ -88,7 +88,7 @@ export default function Home() {
               Core Competencies
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
-              데이터로 증명하는 품질 기준</span>
+              데이터로 증명하는 품질 기준
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed md:px-10 font-medium">
              독자적인 특허 공법과 철저한 데이터 기반 품질 관리 시스템으로 신재(Virgin)급 물성을 구현합니다.
