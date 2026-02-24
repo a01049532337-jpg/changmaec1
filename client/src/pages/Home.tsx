@@ -138,7 +138,7 @@ export default function Home() {
         <div className="flex-grow">
           <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Data-Driven 품질 관리</h3>
           <p className="text-slate-600 mb-10 leading-relaxed">
-            공장에서 나가는 모든 펠릿은 자체 연구실을 거칩니다. 수분율부터 인장강도까지 철저하게 데이터를 추출하여 통과된 제품만 납품합니다.
+            공장에서 나가는 모든 펠렛은 자체 연구실을 거칩니다. 수분율부터 인장강도까지 철저하게 데이터를 추출하여 통과된 제품만 납품합니다.
           </p>
         </div>
         <div className="pt-6 border-t border-slate-100 flex items-center text-blue-800 text-sm font-bold mt-auto">
