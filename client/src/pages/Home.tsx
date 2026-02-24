@@ -48,36 +48,38 @@ export default function Home() {
       </nav>
 
       {/* Hero Section with Factory Background */}
-      <section className="relative bg-cover bg-center text-white py-20 md:py-40 overflow-hidden" style={{backgroundImage: "url('/펠렛배경.jpg')"}}>
+      <section className="relative bg-cover bg-center text-white h-[85vh] min-h-[600px] flex flex-col overflow-hidden" style={{backgroundImage: "url('/펠렛배경.jpg')"}}>
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         
-        <div className="container relative z-10">
-          <div className="space-y-4">
+        <div className="flex-1 container relative z-10 flex flex-col justify-center mt-10 md:mt-20">
+          <div className="space-y-6">
             <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight tracking-tight">
-              Beyond Recycling,  
-
-              Towards Engineering
+              Beyond Recycling,
+              <span className="block mt-4 text-4xl md:text-6xl text-gray-300 font-light">
+                Towards Engineering.
+              </span>
             </h1>
             <p className="text-xl text-slate-200 font-light leading-relaxed max-w-xl">
-              경험과 데이터로 증명된 품질. 다양한 산업군에 최적화된 맞춤형 재생 플라스틱 소재를 제공합니다.
+              경험과 데이터로 증명된 품질. <br className="hidden md:block"/> 
+              다양한 산업군에 최적화된 맞춤형 재생 플라스틱 소재를 제공합니다.
             </p>
           </div>
-            <div className="flex gap-4 pt-4">
-              <a href="/products">
-                <Button className="border-white text-white hover:bg-white/10">
+        </div>
+            <div className="container relative z-10 mt-auto pb-16 flex flex-col sm:flex-row gap-4">
+              <a href="/products" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-48 h-14 bg-white text-gray-900 hover:bg-gray-200 border-none font-bold text-lg shadow-lg transition-colors">
                   제품 보기
                 </Button>
               </a>
-              <a href="/about">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10">
-                  회사소개 <ArrowRight className="ml-2 w-4 h-4" />
+              <a href="/about" className="w-full sm:w-auto">
+                <Button variant="outline" classnName="w-full sm:w-48 h-14 border-white/60 text-white hover:bg-white/10 hover:border-white font-bold text-lg transition-all">
+                  회사소개 <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
             </div>
-          </div>
-        </div>
-      </section>
+        
+          </section>
 
       {/* Core Competencies Section */}
       <section className="py-16 md:py-24 bg-gray-50">
