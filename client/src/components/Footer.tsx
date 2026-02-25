@@ -7,7 +7,6 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-slate-800/60 pb-12">
           
           {/* Company Info */}
-          <div className="space-y-6">
             <img 
               src="/창맥.png" 
               alt="CHANGMAEC Logo" 
