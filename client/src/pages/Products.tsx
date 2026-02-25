@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
-  ArrowRight, CheckCircle, Layers, Settings, Factory, Menu 
+  CheckCircle, Layers, Menu, Factory, Microscope
 } from "lucide-react";
 import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
@@ -54,6 +54,19 @@ export default function Products() {
     }
   ];
 
+
+  const productLineup = [
+    { id: 1, name: "PC/ABS NH FR-BK", material: "PC/ABS Alloy", usage: "전자제품 하우징", features: "난연, Non-Halogen", img: "1.jpg" },
+    { id: 2, name: "ABS Plastic Pellet", material: "ABS Plastic", usage: "범용 사출 부품", features: "Injection Grade, Black", img: "2.jpg" },
+    { id: 3, name: "ABS BK Heat Resistance", material: "ABS Heat Resistant", usage: "내열성 산업 부품", features: "Heated Pellet, Black", img: "3.jpg" },
+    { id: 4, name: "ABS GF20 BK", material: "ABS GF20", usage: "에어컨 팬 (Fan)", features: "GF 20% 보강, 고강성", img: "4.jpg" },
+    { id: 5, name: "PP UV BK", material: "PP UV", usage: "자동차 스티어링 휠", features: "UV Resistance, Black", img: "5.jpg" },
+    { id: 6, name: "PP TD30 BK", material: "PP TD30", usage: "자동차 시트 (Seat)", features: "Talc 30%, 내부 보강", img: "6.jpg" },
+    { id: 7, name: "PA66 GF35 BK", material: "PA66 GF35", usage: "자동차 엔진 부품", features: "Purple Color, 고내열", img: "7.jpg" },
+    { id: 8, name: "HIPS BK NT", material: "HIPS BK NT", usage: "모바일 트레이 (Tray)", features: "IT 기기 운송용 트레이", img: "8.jpg" },
+    { id: 9, name: "PC ABS BK", material: "PC ABS", usage: "자동차 센터페시아", features: "Interior, 고외관 품질", img: "9.jpg" },
+  ];
+
   const processFlow = [
     { step: "01", title: "분쇄된 폐플라스틱 수거", description: "산업 현장에서 분쇄된 고품질의 폐플라스틱 원료를 수거" },
     { step: "02", title: "건조공정", description: "수분을 제거하여 다음공정을 준비" },
@@ -63,20 +76,9 @@ export default function Products() {
     { step: "06", title: "품질 검사 및 포장", description: "엄격한 품질 기준에 따라 검사하고 안전하게 포장하여 납품" }
   ];
 
-  const customizationOptions = [
-    { title: "용도별 물성 설계", description: "고강도, 고인성, 내열성 등 용도별 최적화" },
-    { title: "전용 컬러 커스터마이징", description: "고객사 브랜드 고유 컬러 완벽 구현" },
-    { title: "기능성 첨가제 처방", description: "UV차단 기능 추가" },
-    { title: "혼합 비율 최적화", description: "경제성과 성능을 고려한 최적의 배합비 제공" }
-  ];
-
   return (
     <div className="min-h-screen bg-white text-slate-900">
-      <SEO 
-        title="사업소개" 
-        description="(주)창맥의 고품질 재생 플라스틱 핵심 기술과 생산 프로세스를 소개합니다." 
-      />
-      
+      <SEO title="사업소개" description="(주)창맥의 핵심 기술과 9종의 제품 라인업을 소개합니다." />
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
@@ -84,42 +86,30 @@ export default function Products() {
           <a href="/" className="flex items-center">
             <div className="text-2xl font-extrabold text-slate-900 tracking-tight">(주)창맥</div>
           </a>
-          
-          <div className="hidden md:flex gap-8 items-center">
-            <a href="/about" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">회사소개</a>
-            <a href="/products" className="text-sm font-bold text-slate-900 transition-colors">사업소개</a>
-            <a href="/sustainability" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">지속가능경영</a>
-            <a href="/ir" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">IR</a>
-            <a href="#careers" className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">채용공고</a>
+          <div className="hidden md:flex gap-8 items-center font-bold text-sm">
+            <a href="/about" className="text-slate-500 hover:text-slate-900 transition-colors">회사소개</a>
+            <a href="/products" className="text-slate-900 transition-colors">사업소개</a>
+            <a href="/sustainability" className="text-slate-500 hover:text-slate-900 transition-colors">지속가능경영</a>
+            <a href="/ir" className="text-slate-500 hover:text-slate-900 transition-colors">IR</a>
+            <a href="#careers" className="text-slate-500 hover:text-slate-900 transition-colors">채용공고</a>
           </div>
-
-          <button
-            onClick={() => setSidebarOpen(true)}
-            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
-
+          <button onClick={() => setSidebarOpen(true)} className="md:hidden p-2 text-slate-600"><Menu className="w-6 h-6" /></button>
           <a href="mailto:changmaec1@naver.com" className="hidden md:block">
-            <Button className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-6 rounded-xl transition-all shadow-md">
-              문의하기
-            </Button>
+            <Button className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-6 rounded-xl shadow-md">문의하기</Button>
           </a>
         </div>
       </nav>
 
-      <section className="relative py-24 md:py-32 bg-slate-900 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative py-24 md:py-32 bg-slate-900 text-center">
         <div className="absolute inset-0 z-0 opacity-30 bg-[url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
-        <div className="container px-4 mx-auto max-w-7xl relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white tracking-tight">
-            기술로 증명하는 <span className="text-slate-400">소재의 혁신</span>
-          </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-medium">
-            (주)창맥의 4대 핵심 기술을 통해 구현된 차세대 엔지니어링 플라스틱 솔루션
-          </p>
+        <div className="container px-4 mx-auto max-w-7xl relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white">기술로 증명하는 <span className="text-slate-400">소재의 혁신</span></h1>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto font-medium">화학공학적 전문성을 바탕으로 한 4대 핵심 기술과 용도별 제품 라인업</p>
         </div>
       </section>
 
+      {/* 4대 핵심 기술 (2x2) */}
       <section className="py-24 bg-white">
         <div className="container px-4 mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -154,20 +144,33 @@ export default function Products() {
       </section>
 
       <section className="py-24 bg-slate-50">
-        <div className="container px-4 mx-auto max-w-7xl text-center">
-          <div className="mb-16">
-            <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Production Process</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">생산 프로세스</h2>
+        <div className="container px-4 mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Product Lineup</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">상세 제품 라인업</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {processFlow.map((flow, idx) => (
-              <div key={idx} className="relative group">
-                <div className="p-6 rounded-2xl bg-white border border-slate-200 h-full group-hover:bg-slate-900 transition-all shadow-sm">
-                  <span className="block text-3xl font-black text-slate-100 group-hover:text-slate-800 mb-4 transition-colors">{flow.step}</span>
-                  <h4 className="text-sm font-bold text-slate-900 group-hover:text-white mb-2 transition-colors">{flow.title}</h4>
-                  <p className="text-[11px] text-slate-500 group-hover:text-slate-400 leading-tight transition-colors">{flow.description}</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {productLineup.map((prod) => (
+              <Card key={prod.id} className="overflow-hidden border border-slate-200 shadow-sm bg-white rounded-3xl group hover:shadow-xl transition-all">
+                <div className="h-48 overflow-hidden bg-slate-200 flex items-center justify-center">
+                  <img src={prod.img} alt={prod.name} className="h-full w-full object-contain p-2 group-hover:scale-110 transition-transform duration-500" />
                 </div>
-              </div>
+                <div className="p-8">
+                  <span className="inline-block px-3 py-1 bg-slate-900 text-white text-[10px] font-bold rounded-full mb-3">{prod.material}</span>
+                  <h3 className="text-xl font-extrabold text-slate-900 mb-4">{prod.name}</h3>
+                  <div className="space-y-3 border-t border-slate-50 pt-4">
+                    <div className="flex justify-between text-xs font-medium">
+                      <span className="text-slate-400 font-bold">주요 용도</span>
+                      <span className="text-slate-700 font-bold">{prod.usage}</span>
+                    </div>
+                    <div className="flex justify-between text-xs font-medium">
+                      <span className="text-slate-400 font-bold">주요 특징</span>
+                      <span className="text-slate-700 font-bold text-right max-w-[150px]">{prod.features}</span>
+                    </div>
+                  </div>
+                </div>
+              </Card>
             ))}
           </div>
         </div>
@@ -176,15 +179,15 @@ export default function Products() {
       <section className="py-24 bg-white">
         <div className="container px-4 mx-auto max-w-7xl text-center">
           <div className="mb-16">
-            <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Customized Solution</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">맞춤형 솔루션</h2>
+            <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Production Process</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">생산 프로세스</h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {customizationOptions.map((opt, idx) => (
-              <div key={idx} className="p-8 bg-slate-50 rounded-3xl border border-slate-100 hover:-translate-y-2 transition-all">
-                <Layers className="w-8 h-8 text-slate-300 mx-auto mb-6" />
-                <h4 className="text-lg font-bold text-slate-900 mb-3">{opt.title}</h4>
-                <p className="text-xs text-slate-500 font-medium leading-relaxed">{opt.description}</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {processFlow.map((flow, idx) => (
+              <div key={idx} className="p-6 rounded-2xl bg-slate-50 border border-slate-100 h-full hover:bg-slate-900 group transition-all shadow-sm">
+                <span className="block text-3xl font-black text-slate-200 group-hover:text-slate-800 mb-4 transition-colors">{flow.step}</span>
+                <h4 className="text-sm font-bold text-slate-900 group-hover:text-white mb-2 transition-colors">{flow.title}</h4>
+                <p className="text-[11px] text-slate-500 group-hover:text-slate-400 leading-tight transition-colors">{flow.description}</p>
               </div>
             ))}
           </div>
@@ -193,12 +196,10 @@ export default function Products() {
 
       <section className="py-24 bg-slate-900 text-white text-center">
         <div className="container px-4 mx-auto">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">귀사의 산업에 최적화된 재생 수지를 제안합니다</h2>
-          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto font-medium">데이터로 증명된 품질과 16년 업력의 신뢰를 경험하십시오.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">창맥의 기술력으로 제품을 혁신하십시오</h2>
+          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto font-medium">고분자 공학 데이터에 기반한 완벽한 품질을 약속합니다.</p>
           <a href="mailto:changmaec1@naver.com">
-            <Button className="bg-white text-slate-900 hover:bg-slate-200 font-bold text-lg px-10 h-16 rounded-2xl transition-all shadow-xl hover:-translate-y-1">
-              상담 요청하기
-            </Button>
+            <Button className="bg-white text-slate-900 hover:bg-slate-200 font-bold text-lg px-10 h-16 rounded-2xl transition-all shadow-xl hover:-translate-y-1">상담 요청하기</Button>
           </a>
         </div>
       </section>
