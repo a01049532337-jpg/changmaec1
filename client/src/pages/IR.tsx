@@ -13,7 +13,6 @@ export default function IR() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // 웅장한 느낌의 B2B 슬라이드 테마
   const slides = [
     {
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
@@ -36,7 +35,6 @@ export default function IR() {
     return () => clearInterval(timer);
   }, []);
 
-  // 요청하신 핵심 하이라이트 데이터
   const investmentHighlights = [
     {
       title: "압도적 시장 점유율",
@@ -119,7 +117,7 @@ export default function IR() {
         ))}
       </section>
 
-      {/* Highlights Dashboard (3분할 레이아웃) */}
+      {/* Highlights Dashboard */}
       <section className="py-24 bg-white relative -mt-20 z-30">
         <div className="container px-4 mx-auto max-w-7xl">
           <div className="grid md:grid-cols-3 gap-0 rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-100">
