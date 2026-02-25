@@ -254,103 +254,92 @@ export default function Home() {
 </section>
 
       {/* Products Section */}
-      <section id="products" className="py-24 md:py-32 bg-white">
+     <section id="products" className="py-24 md:py-32 bg-white">
   <div className="container px-4 mx-auto max-w-7xl">
     <div className="text-center max-w-3xl mx-auto mb-20">
       <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
         Our Products
       </span>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">
-        고성능 재생 컴파운드 솔루션
+        고성능 재생 컴파운드 라인업
       </h2>
       <p className="text-lg text-slate-600 font-medium">
-        복합 기능의 물성을 구현하여 자동차, 전자제품 등 정밀 산업 분야에 최적화된 소재를 공급합니다.
+        복합 기능을 구현한 합성수지로 다양한 산업 분야의 요구사항을 충족합니다.
       </p>
     </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
-      {/* PP Compound */}
-      <div className="group bg-slate-50 p-10 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/30">
-        <div className="mb-8 overflow-hidden rounded-xl bg-white shadow-inner">
-          <img 
-            src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?q=80&w=800&auto=format&fit=crop" 
-            alt="PP Compound" 
-            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* 1. PP Compound */}
+      <div className="group bg-slate-50 p-8 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-slate-300">
         <h3 className="text-2xl font-bold text-slate-900 mb-4">PP 컴파운드</h3>
-        <p className="text-slate-600 mb-8 leading-relaxed">
-          PCR 폴리프로필렌 기반의 고성능 소재입니다. 내충격성과 성형성이 우수하여 자동차 내장재 및 가전에 최적화되어 있습니다.
+        <p className="text-slate-600 mb-8 leading-relaxed text-sm">
+          PCR 폴리프로필렌 기반 소재. 내충격성과 성형성이 우수하여 자동차 내장재 및 가전 부품에 최적화되어 있습니다.
         </p>
-        <div className="space-y-3 pt-6 border-t border-slate-200">
-          <div className="flex justify-between text-sm">
-            <span className="text-slate-400 font-medium">주요 용도</span>
-            <span className="text-slate-900 font-bold">자동차 내장재, 가전</span>
-          </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-slate-400 font-medium">핵심 강점</span>
-            <span className="text-slate-900 font-bold">고강성, 고유동성</span>
-          </div>
+        <div className="space-y-2 pt-6 border-t border-slate-200 text-xs">
+          <div className="flex justify-between"><span className="text-slate-400">주요 용도</span><span className="text-slate-900 font-bold">자동차 내장재, 가전</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">핵심 강점</span><span className="text-slate-900 font-bold">고강성, 고유동성</span></div>
         </div>
       </div>
 
-      {/* PA6/PA66 Compound */}
-      <div className="group bg-slate-50 p-10 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/30">
-        <div className="mb-8 overflow-hidden rounded-xl bg-white shadow-inner">
-          <img 
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=800&auto=format&fit=crop" 
-            alt="PA Compound" 
-            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
+      {/* 2. PA6/PA66 Compound */}
+      <div className="group bg-slate-50 p-8 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-slate-300">
         <h3 className="text-2xl font-bold text-slate-900 mb-4">PA6/PA66 컴파운드</h3>
-        <p className="text-slate-600 mb-8 leading-relaxed">
-          고강도 폴리아마이드 재생 소재입니다. 뛰어난 내열성과 기계적 강도로 엔진 커버 등 산업용 부품에 사용됩니다.
+        <p className="text-slate-600 mb-8 leading-relaxed text-sm">
+          고강도 폴리아마이드 재생 소재. 뛰어난 내열성과 기계적 강도를 바탕으로 엔진 커버 및 산업용 부품에 적용됩니다.
         </p>
-        <div className="space-y-3 pt-6 border-t border-slate-200">
-          <div className="flex justify-between text-sm">
-            <span className="text-slate-400 font-medium">주요 용도</span>
-            <span className="text-slate-900 font-bold">기계 부품, 산업용 부품</span>
-          </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-slate-400 font-medium">핵심 강점</span>
-            <span className="text-slate-900 font-bold">내열성, 기계적 강도</span>
-          </div>
+        <div className="space-y-2 pt-6 border-t border-slate-200 text-xs">
+          <div className="flex justify-between"><span className="text-slate-400">주요 용도</span><span className="text-slate-900 font-bold">기계 및 엔진 부품</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">핵심 강점</span><span className="text-slate-900 font-bold">내열성, 기계적 강도</span></div>
         </div>
       </div>
 
-      {/* PC Compound */}
-      <div className="group bg-slate-50 p-10 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-blue-500/30">
-        <div className="mb-8 overflow-hidden rounded-xl bg-white shadow-inner">
-          <img 
-            src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&auto=format&fit=crop" 
-            alt="PC Compound" 
-            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        </div>
+      {/* 3. PC Compound */}
+      <div className="group bg-slate-50 p-8 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-slate-300">
         <h3 className="text-2xl font-bold text-slate-900 mb-4">PC 컴파운드</h3>
-        <p className="text-slate-600 mb-8 leading-relaxed">
-          투명성과 강도가 필요한 조명 및 광학 부품용 소재입니다. 재생 폴리카보네이트의 물리적 한계를 극복했습니다.
+        <p className="text-slate-600 mb-8 leading-relaxed text-sm">
+          재생 폴리카보네이트. 투명성과 고충격성이 필요한 조명 및 광학 부품에 적합합니다.
         </p>
-        <div className="space-y-3 pt-6 border-t border-slate-200">
-          <div className="flex justify-between text-sm">
-            <span className="text-slate-400 font-medium">주요 용도</span>
-            <span className="text-slate-900 font-bold">전자제품 외관, 조명</span>
-          </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-slate-400 font-medium">핵심 강점</span>
-            <span className="text-slate-900 font-bold">투명성, 고충격성</span>
-          </div>
+        <div className="space-y-2 pt-6 border-t border-slate-200 text-xs">
+          <div className="flex justify-between"><span className="text-slate-400">주요 용도</span><span className="text-slate-900 font-bold">조명, 광학 부품</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">핵심 강점</span><span className="text-slate-900 font-bold">투명성, 고충격성</span></div>
         </div>
       </div>
-    </div>
-    
-    <div className="mt-16 text-center">
-      <a href="/products">
-        <Button variant="outline" className="h-14 px-10 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-bold text-lg rounded-xl transition-all">
-          전체 제품 카탈로그 보기
-        </Button>
-      </a>
+
+      {/* 4. ABS (내열) */}
+      <div className="group bg-slate-50 p-8 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-slate-300">
+        <h3 className="text-2xl font-bold text-slate-900 mb-4">ABS (내열)</h3>
+        <p className="text-slate-600 mb-8 leading-relaxed text-sm">
+          고온 환경에서도 형태 변형이 적은 내열 ABS 소재. 가전제품의 외장재나 자동차의 고온 노출 부위에 최적입니다.
+        </p>
+        <div className="space-y-2 pt-6 border-t border-slate-200 text-xs">
+          <div className="flex justify-between"><span className="text-slate-400">주요 용도</span><span className="text-slate-900 font-bold">가전 외장재, 자동차 부품</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">핵심 강점</span><span className="text-slate-900 font-bold">열안정성, 광택 유지</span></div>
+        </div>
+      </div>
+
+      {/* 5. PBT Compound */}
+      <div className="group bg-slate-50 p-8 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-slate-300">
+        <h3 className="text-2xl font-bold text-slate-900 mb-4">PBT 컴파운드</h3>
+        <p className="text-slate-600 mb-8 leading-relaxed text-sm">
+          우수한 전기적 특성과 치수 안정성을 가진 소재. 정밀 커넥터 및 전기·전자 분야의 핵심 부품 소재로 공급됩니다.
+        </p>
+        <div className="space-y-2 pt-6 border-t border-slate-200 text-xs">
+          <div className="flex justify-between"><span className="text-slate-400">주요 용도</span><span className="text-slate-900 font-bold">전기·전자 커넥터</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">핵심 강점</span><span className="text-slate-900 font-bold">절연성, 치수 안정성</span></div>
+        </div>
+      </div>
+
+      {/* 6. PC/ABS Alloy */}
+      <div className="group bg-slate-50 p-8 rounded-2xl border border-slate-100 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-slate-300">
+        <h3 className="text-2xl font-bold text-slate-900 mb-4">PC/ABS Alloy</h3>
+        <p className="text-slate-600 mb-8 leading-relaxed text-sm">
+          PC의 내열·충격성과 ABS의 가공성을 결합한 합성 수지. IT 기기 하우징 및 자동차 부품에 폭넓게 적용됩니다.
+        </p>
+        <div className="space-y-2 pt-6 border-t border-slate-200 text-xs">
+          <div className="flex justify-between"><span className="text-slate-400">주요 용도</span><span className="text-slate-900 font-bold">IT 기기 하우징, 외장 부품</span></div>
+          <div className="flex justify-between"><span className="text-slate-400">핵심 강점</span><span className="text-slate-900 font-bold">균형 잡힌 물리 특성</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
