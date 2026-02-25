@@ -151,33 +151,35 @@ export default function Home() {
 </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 md:py-32 bg-white overflow-hidden">
+      <section id="about" className="py-24 md:py-32 bg-slate-50 overflow-hidden">
   <div className="container px-4 mx-auto max-w-7xl">
+    <div className="text-center max-w-3xl mx-auto mb-20">
+      <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
+        About Changmaec
+      </span>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        창맥은 복합 기능을 구현한<br />
+        재생수지를 제조합니다
+      </h2>
+    </div>
+
     <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
       <div className="order-2 lg:order-1">
-        <span className="text-blue-800 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
-          About Changmac
-        </span>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-10 tracking-tight leading-tight">
-          창맥은 복합 기능을 구현한<br />
-          재생수지를 제조합니다
-        </h2>
-
         <div className="space-y-5 mb-12">
-          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+          <div className="flex items-center p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div className="w-2 h-2 bg-slate-600 rounded-full mr-4 flex-shrink-0"></div>
             <p className="text-lg text-slate-800 font-bold tracking-tight">첨단 재활용 플라스틱 기술 개발</p>
           </div>
-          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+          <div className="flex items-center p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div className="w-2 h-2 bg-slate-600 rounded-full mr-4 flex-shrink-0"></div>
             <p className="text-lg text-slate-800 font-bold tracking-tight">재활용 플라스틱 생산 공정 개발</p>
           </div>
-          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+          <div className="flex items-center p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div className="w-2 h-2 bg-slate-600 rounded-full mr-4 flex-shrink-0"></div>
             <p className="text-lg text-slate-800 font-bold tracking-tight">복합기능 재활용 합성수지 생산</p>
           </div>
-          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+          <div className="flex items-center p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+            <div className="w-2 h-2 bg-slate-600 rounded-full mr-4 flex-shrink-0"></div>
             <p className="text-lg text-slate-800 font-bold tracking-tight">재활용소재 기반 B2C제품 개발 및 생산</p>
           </div>
         </div>
@@ -195,14 +197,14 @@ export default function Home() {
         </div>
 
         <a href="/about" className="inline-block">
-          <Button className="h-14 px-8 bg-slate-900 text-white hover:bg-blue-700 font-bold text-lg rounded-xl transition-colors shadow-lg">
+          <Button className="h-14 px-8 bg-slate-900 text-white hover:bg-slate-800 font-bold text-lg rounded-xl transition-colors shadow-lg">
             회사 소개 자세히 보기
           </Button>
         </a>
       </div>
 
       <div className="order-1 lg:order-2 relative">
-        <div className="absolute inset-0 bg-slate-100 rounded-3xl transform rotate-3 scale-105 -z-10 transition-transform hover:rotate-6 duration-500 border border-slate-200"></div>
+        <div className="absolute inset-0 bg-white rounded-3xl transform rotate-3 scale-105 -z-10 transition-transform hover:rotate-6 duration-500 border border-slate-200 shadow-sm"></div>
         <div className="bg-white p-12 rounded-3xl shadow-xl border border-slate-200 flex items-center justify-center min-h-[400px]">
           <img
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/TXZUbWyeLOLNEyrb.png"
