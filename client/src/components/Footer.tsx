@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-6">
             <img 
               src="/창맥.png" 
-              alt="CHANGMAC Logo" 
+              alt="CHANGMAEC Logo" 
               className="h-10 w-auto object-contain brightness-0 invert opacity-90"
             />
             <p className="text-slate-400 leading-relaxed text-sm font-medium">
