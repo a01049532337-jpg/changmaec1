@@ -56,15 +56,15 @@ export default function Products() {
 
 
   const productLineup = [
-    { id: 1, name: "PC/ABS NH FR-BK", material: "PC/ABS Alloy", usage: "전자제품 하우징", features: "난연, Non-Halogen", img: "1.jpg" },
-    { id: 2, name: "ABS Plastic Pellet", material: "ABS Plastic", usage: "범용 사출 부품", features: "Injection Grade, Black", img: "2.jpg" },
-    { id: 3, name: "ABS BK Heat Resistance", material: "ABS Heat Resistant", usage: "내열성 산업 부품", features: "Heated Pellet, Black", img: "3.jpg" },
-    { id: 4, name: "ABS GF20 BK", material: "ABS GF20", usage: "에어컨 팬 (Fan)", features: "GF 20% 보강, 고강성", img: "4.jpg" },
-    { id: 5, name: "PP UV BK", material: "PP UV", usage: "자동차 스티어링 휠", features: "UV Resistance, Black", img: "5.jpg" },
-    { id: 6, name: "PP TD30 BK", material: "PP TD30", usage: "자동차 시트 (Seat)", features: "Talc 30%, 내부 보강", img: "6.jpg" },
-    { id: 7, name: "PA66 GF35 BK", material: "PA66 GF35", usage: "자동차 엔진 부품", features: "Purple Color, 고내열", img: "7.jpg" },
-    { id: 8, name: "HIPS BK NT", material: "HIPS BK NT", usage: "모바일 트레이 (Tray)", features: "IT 기기 운송용 트레이", img: "8.jpg" },
-    { id: 9, name: "PC ABS BK", material: "PC ABS", usage: "자동차 센터페시아", features: "Interior, 고외관 품질", img: "9.jpg" },
+    { id: 1, name: "PC/ABS NH FR-BK", material: "PC/ABS Alloy", usage: "전자제품 하우징", features: "난연, Non-Halogen", img: "/1.jpg" },
+    { id: 2, name: "ABS Plastic Pellet", material: "ABS Plastic", usage: "범용 사출 부품", features: "Injection Grade, Black", img: "/2.jpg" },
+    { id: 3, name: "ABS BK Heat Resistance", material: "ABS Heat Resistant", usage: "내열성 산업 부품", features: "Heated Pellet, Black", img: "/3.jpg" },
+    { id: 4, name: "ABS GF20 BK", material: "ABS GF20", usage: "에어컨 팬 (Fan)", features: "GF 20% 보강, 고강성", img: "/4.jpg" },
+    { id: 5, name: "PP UV BK", material: "PP UV", usage: "자동차 스티어링 휠", features: "UV Resistance, Black", img: "/5.jpg" },
+    { id: 6, name: "PP TD30 BK", material: "PP TD30", usage: "자동차 시트 (Seat)", features: "Talc 30%, 내부 보강", img: "/6.jpg" },
+    { id: 7, name: "PA66 GF35 BK", material: "PA66 GF35", usage: "자동차 엔진 부품", features: "Purple Color, 고내열", img: "/7.jpg" },
+    { id: 8, name: "HIPS BK NT", material: "HIPS BK NT", usage: "모바일 트레이 (Tray)", features: "IT 기기 운송용 트레이", img: "/8.jpg" },
+    { id: 9, name: "PC ABS BK", material: "PC ABS", usage: "자동차 센터페시아", features: "Interior, 고외관 품질", img: "/9.jpg" },
   ];
 
   const processFlow = [
