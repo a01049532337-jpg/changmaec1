@@ -1,346 +1,201 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Leaf, Zap, Globe, TrendingUp, Target, CheckCircle, Droplet, Recycle, Users } from "lucide-react";
+import { 
+  Leaf, Recycle, ShieldCheck, Globe, BarChart, 
+  Menu, FileText, Target, Award, CheckCircle 
+} from "lucide-react";
+import { useState } from "react";
+import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 export default function Sustainability() {
-  const esgPillars = [
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const esgStrategies = [
     {
+      title: "Environmental (E)",
+      subtitle: "탄소 저감 및 순환경제 실현",
       icon: Leaf,
-      title: "환경(Environment)",
-      description: "탄소중립 달성과 순환경제 구현을 통한 지구 보호",
-      color: "bg-green-100"
-    },
-    {
-      icon: Users,
-      title: "사회(Social)",
-      description: "공정한 노동 환경과 지역사회 발전에 기여",
-      color: "bg-blue-100"
-    },
-    {
-      icon: Target,
-      title: "지배(Governance)",
-      description: "투명한 경영과 윤리적 의사결정 체계 구축",
-      color: "bg-purple-100"
-    }
-  ];
-
-  const carbonNeutralProjects = [
-    {
-      title: "탄소중립 사업화 지원사업 (2025~2027)",
-      period: "2025년 ~ 2027년",
-      status: "진행 중",
-      description: "정부 선정 탄소중립 사업화 지원사업으로 재생 플라스틱 기반 저탄소 소재 개발 및 상용화",
-      goals: [
-        "재생 플라스틱 생산 공정의 탄소 배출량 30% 감축",
-        "저탄소 인증 제품 개발 및 시장 진출",
-        "탄소 중립 생산 라인 구축"
-      ],
-      impact: "연간 CO₂ 감축량 500톤 이상 달성 목표"
-    },
-    {
-      title: "탄소소재 화학적 순환 자원화 기술개발 (2023)",
-      period: "2023년 수행",
-      status: "완료",
-      description: "폐플라스틱의 화학적 재활용 기술 개발로 진정한 순환경제 실현",
-      goals: [
-        "폐플라스틱 화학적 분해 기술 개발",
-        "고품질 재생 원료 생산 공정 확립",
-        "기술 특허 출원 및 확보"
-      ],
-      impact: "기존 기계적 재활용 대비 품질 향상 및 재활용 횟수 무제한 확대"
-    }
-  ];
-
-  const circularEconomySteps = [
-    {
-      step: "1단계",
-      title: "폐플라스틱 수집",
-      description: "산업 현장과 소비자로부터 폐플라스틱 수거 및 분류"
-    },
-    {
-      step: "2단계",
-      title: "전처리 및 선별",
-      description: "불순물 제거 및 재질별 분류를 통한 품질 향상"
-    },
-    {
-      step: "3단계",
-      title: "화학적 순환 자원화",
-      description: "고급 기술을 통한 폐플라스틱의 화학적 분해 및 재구성"
-    },
-    {
-      step: "4단계",
-      title: "고품질 컴파운드 생산",
-      description: "PP, PC, PA6, PA66 등 고부가가치 재생 소재 제조"
-    },
-    {
-      step: "5단계",
-      title: "고객 공급",
-      description: "자동차, 가전, 전자 등 다양한 산업에 공급"
-    },
-    {
-      step: "6단계",
-      title: "제품 재활용",
-      description: "사용 후 제품의 재수거 및 재활용 사이클 반복"
-    }
-  ];
-
-
-
-  const socialInitiatives = [
-    {
-      title: "공정한 노동 환경",
       items: [
-        "산업 안전 기준 초과 충족",
-        "근로자 교육 및 역량 개발 프로그램",
-        "공정한 임금 및 복리후생 제공"
+        "2025-2027 탄소중립 사업화 지원사업 수행",
+        "해중합 및 화학적 재활용 기술 고도화",
+        "에너지 저감형 스마트 압출 공정 도입"
       ]
     },
     {
-      title: "지역사회 기여",
+      title: "Social (S)",
+      subtitle: "안전 경영 및 지역사회 상생",
+      icon: ShieldCheck,
       items: [
-        "지역 인재 채용 및 고용 창출",
-        "환경 정화 활동 참여",
-        "지역 대학과의 산학협력 추진"
+        "산업안전보건 기준 준수 및 무재해 달성",
+        "공정 자동화를 통한 작업 환경 개선",
+        "지역 인재 채용 및 산학 협력 확대"
       ]
     },
     {
-      title: "공급망 책임경영",
+      title: "Governance (G)",
+      subtitle: "투명한 품질 경영 및 신뢰",
+      icon: BarChart,
       items: [
-        "협력사 ESG 기준 준수 요구",
-        "공정한 거래 관행 실천",
-        "협력사 기술 지원 및 동반 성장"
+        "ISO 9001 품질경영시스템 기반 공정 관리",
+        "데이터 기반 리스크 관리 체계 가동",
+        "윤리 경영 및 공정 거래 질서 확립"
       ]
     }
   ];
 
-  const governanceInitiatives = [
-    {
-      title: "투명한 정보 공개",
-      description: "정기적인 지속가능경영 보고서 발간 및 이해관계자 소통"
-    },
-    {
-      title: "윤리 경영 체계",
-      description: "임직원 윤리 교육 및 부정행위 신고 시스템 운영"
-    },
-    {
-      title: "이사회 다양성",
-      description: "전문성과 다양성을 갖춘 이사회 구성"
-    },
-    {
-      title: "리스크 관리",
-      description: "환경, 사회, 경제적 리스크 사전 예방 및 관리"
-    }
+  const certifications = [
+    { title: "ISO 9001", description: "품질경영시스템 인증", date: "2022 획득" },
+    { title: "소부장 전문기업", description: "소재·부품·장비 전문기업 확인", date: "2022 획득" },
+    { title: "스마트공장", description: "스마트공장 수준 확인 인증", date: "2022 획득" },
+    { title: "연구개발전담부서", description: "기업부설 연구소 인정", date: "2024 획득" }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
-        <div className="container flex items-center justify-between h-16">
-          <a href="/" className="text-2xl font-bold text-blue-700">창맥</a>
-          <a href="/" className="text-blue-700 hover:text-blue-800">← 돌아가기</a>
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <SEO title="지속가능경영" description="(주)창맥의 ESG 경영 비전과 탄소중립 실천 전략을 소개합니다." />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div className="container px-4 mx-auto max-w-7xl flex items-center justify-between h-20">
+          <a href="/" className="flex items-center">
+            <div className="text-2xl font-extrabold text-slate-900 tracking-tight">(주)창맥</div>
+          </a>
+          <div className="hidden md:flex gap-8 items-center font-bold text-sm">
+            <a href="/about" className="text-slate-500 hover:text-slate-900 transition-colors">회사소개</a>
+            <a href="/products" className="text-slate-500 hover:text-slate-900 transition-colors">사업소개</a>
+            <a href="/sustainability" className="text-slate-900 transition-colors">지속가능경영</a>
+            <a href="/ir" className="text-slate-500 hover:text-slate-900 transition-colors">IR</a>
+            <a href="#careers" className="text-slate-500 hover:text-slate-900 transition-colors">채용공고</a>
+          </div>
+          <button onClick={() => setSidebarOpen(true)} className="md:hidden p-2 text-slate-600"><Menu className="w-6 h-6" /></button>
+          <a href="mailto:changmaec1@naver.com" className="hidden md:block">
+            <Button className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-6 rounded-xl shadow-md">문의하기</Button>
+          </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/dsmUceotfjVoRwPp.png" 
-            alt="Sustainability Vision" 
-            className="w-full h-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-blue-900/90"></div>
-        </div>
-        <div className="container relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">지속가능경영</h1>
-          <p className="text-lg text-green-100 max-w-2xl">
-            (주)창맥은 환경, 사회, 지배구조(ESG)의 균형 있는 발전을 통해 
-            지속가능한 미래를 만들어갑니다.
+      <section className="relative py-24 md:py-32 bg-slate-900 text-center overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div className="container px-4 mx-auto max-w-7xl relative z-10">
+          <span className="text-slate-400 font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Sustainability</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white tracking-tight">
+            내일을 위한 <span className="text-emerald-400">순환경제</span>의 중심
+          </h1>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto font-medium">
+            (주)창맥은 재생 플라스틱 기술 혁신을 통해 탄소 발생을 억제하고,<br />지속가능한 미래를 위한 사회적 책임을 다합니다.
           </p>
-        </div>
-      </section>
-
-      {/* ESG Vision Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            ESG 경영 비전
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {esgPillars.map((pillar, idx) => {
-              const Icon = pillar.icon;
-              return (
-                <Card key={idx} className="p-8 hover:shadow-lg transition">
-                  <div className={`w-12 h-12 ${pillar.color} rounded-lg flex items-center justify-center mb-4`}>
-                    <Icon className="w-6 h-6 text-gray-800" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{pillar.title}</h3>
-                  <p className="text-gray-600">{pillar.description}</p>
-                </Card>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
-      {/* Carbon Neutral Projects Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            주요 탄소중립 사업
-          </h2>
-          <div className="space-y-8">
-            {carbonNeutralProjects.map((project, idx) => (
-              <Card key={idx} className="p-8 border-l-4 border-l-green-600 hover:shadow-lg transition">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-green-700 mb-2">{project.title}</h3>
-                    <p className="text-gray-600 mb-2">{project.period}</p>
-                  </div>
-                  <span className={`px-4 py-2 rounded-full text-sm font-bold ${
-                    project.status === "진행 중" 
-                      ? "bg-green-100 text-green-800" 
-                      : "bg-blue-100 text-blue-800"
-                  }`}>
-                    {project.status}
-                  </span>
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed">{project.description}</p>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-bold text-gray-800 mb-3">주요 목표</h4>
-                    <ul className="space-y-2">
-                      {project.goals.map((goal, goalIdx) => (
-                        <li key={goalIdx} className="flex gap-2 text-gray-700">
-                          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                          <span>{goal}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="bg-green-50 rounded-lg p-4">
-                    <h4 className="font-bold text-gray-800 mb-2">예상 효과</h4>
-                    <p className="text-green-700 font-semibold">{project.impact}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Circular Economy Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            순환경제 실현 프로세스
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            (주)창맥은 폐플라스틱의 화학적 순환 자원화 기술을 통해 
-            진정한 순환경제를 구현하고 있습니다.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {circularEconomySteps.map((item, idx) => (
-              <div key={idx} className="relative">
-                <Card className="p-6 h-full">
-                  <div className="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold mb-4">
-                    {item.step.split("단계")[0]}
-                  </div>
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.description}</p>
-                </Card>
-                {idx < circularEconomySteps.length - 1 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-1 bg-green-300"></div>
-                )}
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8 leading-tight">
+                플라스틱의 생애주기를<br />다시 정의합니다
+              </h2>
+              <p className="text-slate-600 font-medium leading-relaxed mb-10">
+                단순한 폐기물 처리를 넘어, 고분자 사슬 보강 기술과 화학적 재활용 공정을 통해 폐플라스틱에 새로운 생명력을 불어넣습니다. 창맥의 순환경제 모델은 자원 고갈을 방지하고 환경 부하를 최소화하는 기술적 해답입니다.
+              </p>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                  <Recycle className="w-8 h-8 text-emerald-500 mb-4" />
+                  <h4 className="font-bold text-slate-900 mb-2">자원 순환율 극대화</h4>
+                  <p className="text-xs text-slate-500 font-medium">선별 및 정제 기술을 통한 고품질 원료 회수</p>
+                </div>
+                <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                  <Globe className="w-8 h-8 text-blue-500 mb-4" />
+                  <h4 className="font-bold text-slate-900 mb-2">탄소 배출 저감</h4>
+                  <p className="text-xs text-slate-500 font-medium">신재 대비 탄소 배출량 획기적 감축</p>
+                </div>
               </div>
-            ))}
-          </div>
-          <div className="bg-green-50 rounded-lg p-8 border border-green-200">
-            <h3 className="text-xl font-bold text-green-800 mb-4">화학적 순환 자원화의 장점</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
-                <h4 className="font-bold text-green-700 mb-2">무제한 재활용</h4>
-                <p className="text-gray-700 text-sm">
-                  기계적 재활용과 달리 화학적 재활용은 품질 저하 없이 무제한 재활용 가능
-                </p>
+            </div>
+            <div className="relative">
+              <div className="aspect-square bg-slate-100 rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1600&auto=format&fit=crop" 
+                  alt="Research" 
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+                />
               </div>
-              <div>
-                <h4 className="font-bold text-green-700 mb-2">고품질 소재</h4>
-                <p className="text-gray-700 text-sm">
-                  원료와 동등한 품질의 재생 소재 생산으로 고부가가치 제품 제조 가능
-                </p>
-              </div>
-              <div>
-                <h4 className="font-bold text-green-700 mb-2">환경 보호</h4>
-                <p className="text-gray-700 text-sm">
-                  폐기물 최소화와 탄소 배출 감축으로 지구 환경 보호에 기여
-                </p>
+              <div className="absolute -bottom-6 -left-6 p-8 bg-slate-900 text-white rounded-3xl shadow-xl hidden md:block">
+                <p className="text-3xl font-black mb-1">16+</p>
+                <p className="text-xs font-bold text-slate-400">YEARS OF EXPERTISE</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
-      {/* Social Initiatives Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            사회적 책임 (Social)
-          </h2>
+      {/* ESG Strategy Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">ESG 경영 전략</h2>
+            <p className="mt-4 text-slate-500 font-medium">창맥은 환경(E), 사회(S), 지배구조(G) 전 영역에서 실질적인 변화를 만듭니다.</p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {socialInitiatives.map((initiative, idx) => (
-              <Card key={idx} className="p-8 hover:shadow-lg transition">
-                <h3 className="text-xl font-bold text-blue-700 mb-4">{initiative.title}</h3>
-                <ul className="space-y-3">
-                  {initiative.items.map((item, itemIdx) => (
-                    <li key={itemIdx} className="flex gap-3 text-gray-700">
-                      <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
+            {esgStrategies.map((strategy, idx) => {
+              const Icon = strategy.icon;
+              return (
+                <div key={idx} className="p-10 bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl transition-all">
+                  <div className="w-12 h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{strategy.title}</h3>
+                  <p className="text-sm font-bold text-slate-400 mb-8">{strategy.subtitle}</p>
+                  <ul className="space-y-4">
+                    {strategy.items.map((item, iIdx) => (
+                      <li key={iIdx} className="flex items-start gap-3 text-sm font-medium text-slate-600">
+                        <CheckCircle className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-24 bg-white">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <div className="text-center mb-16">
+            <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Compliance</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">인증 및 준수 사항</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {certifications.map((cert, idx) => (
+              <div key={idx} className="p-8 text-center rounded-3xl bg-slate-50 border border-slate-100 hover:bg-slate-900 group transition-all duration-300">
+                <Award className="w-10 h-10 text-slate-300 mx-auto mb-6 group-hover:text-emerald-400 transition-colors" />
+                <h4 className="font-extrabold text-slate-900 group-hover:text-white transition-colors mb-2">{cert.title}</h4>
+                <p className="text-xs text-slate-500 group-hover:text-slate-400 mb-4 transition-colors">{cert.description}</p>
+                <span className="text-[10px] font-bold text-slate-400 px-3 py-1 bg-white rounded-full group-hover:bg-slate-800 transition-colors">
+                  {cert.date}
+                </span>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Governance Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            투명한 지배구조 (Governance)
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {governanceInitiatives.map((initiative, idx) => (
-              <Card key={idx} className="p-8 hover:shadow-lg transition">
-                <h3 className="text-lg font-bold text-purple-700 mb-3">{initiative.title}</h3>
-                <p className="text-gray-700">{initiative.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Commitment Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-green-700 to-blue-900 text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            지속가능한 미래를 위한 약속
-          </h2>
-          <p className="text-lg text-green-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            (주)창맥은 탄소중립 사업화와 화학적 순환 자원화 기술개발을 통해 
-            진정한 순환경제를 실현하고, 모든 이해관계자와 함께 
-            지속가능한 미래를 만들어가겠습니다.
+      {/* Bottom Banner */}
+      <section className="py-24 bg-slate-900 text-white text-center">
+        <div className="container px-4 mx-auto">
+          <Target className="w-16 h-16 text-emerald-400 mx-auto mb-8" />
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">탄소중립을 향한 멈추지 않는 도전</h2>
+          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto font-medium">
+            (주)창맥은 2030 탄소중립 로드맵을 바탕으로 친환경 플라스틱 산업의 글로벌 표준을 선도하겠습니다.
           </p>
-          <a href="mailto:changmaec1@naver.com">
-            <Button className="bg-lime-400 text-green-900 hover:bg-lime-500 text-lg px-8 py-6">
-              지금 문의하기
+          <a href="/contact">
+            <Button className="bg-emerald-500 text-slate-900 hover:bg-emerald-400 font-bold text-lg px-10 h-16 rounded-2xl transition-all shadow-xl">
+              환경 경영 문의하기
             </Button>
           </a>
         </div>
@@ -350,5 +205,4 @@ export default function Sustainability() {
     </div>
   );
 }
-
 
