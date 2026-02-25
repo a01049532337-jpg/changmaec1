@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 
 export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -156,12 +157,12 @@ export default function Home() {
     className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
     style={{ backgroundImage: "url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2000&auto=format&fit=crop')" }}
   >
-    <div className="absolute inset-0 bg-slate-900/85"></div>
+    <div className="absolute inset-0 bg-slate-900/70"></div>
   </div>
 
   <div className="container relative z-10 px-4 mx-auto max-w-7xl">
     <div className="text-center max-w-3xl mx-auto mb-20">
-      <span className="text-slate-400 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
+      <span className="text-slate-300 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
         About Changmaec
       </span>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
@@ -192,13 +193,13 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap gap-3 mb-10">
-          <span className="px-4 py-2.5 bg-transparent border border-white/30 text-white font-bold rounded-lg text-sm">
+          <span className="px-4 py-2.5 bg-transparent border border-white/40 text-white font-bold rounded-lg text-sm">
             스마트공장 인증
           </span>
-          <span className="px-4 py-2.5 bg-transparent border border-white/30 text-white font-bold rounded-lg text-sm">
+          <span className="px-4 py-2.5 bg-transparent border border-white/40 text-white font-bold rounded-lg text-sm">
             ISO 9001 인증
           </span>
-          <span className="px-4 py-2.5 bg-transparent border border-white/30 text-white font-bold rounded-lg text-sm">
+          <span className="px-4 py-2.5 bg-transparent border border-white/40 text-white font-bold rounded-lg text-sm">
             소재부품장비 전문기업
           </span>
         </div>
@@ -210,14 +211,42 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="order-1 lg:order-2 relative">
+      <div className="order-1 lg:order-2 relative h-full min-h-[400px]">
         <div className="absolute inset-0 bg-white/5 backdrop-blur-md rounded-3xl transform rotate-3 scale-105 -z-10 border border-white/10"></div>
-        <div className="bg-white p-12 rounded-3xl shadow-2xl flex items-center justify-center min-h-[400px]">
-          <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/TXZUbWyeLOLNEyrb.png"
-            alt="(주)창맥 로고"
-            className="max-w-full h-auto max-h-48 object-contain"
-          />
+        
+        <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden h-full min-h-[400px] border border-slate-200 group">
+          <div 
+            className={`absolute inset-0 flex items-center justify-center p-12 bg-white transition-opacity duration-500 ease-in-out ${activeSlide === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          >
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/TXZUbWyeLOLNEyrb.png"
+              alt="(주)창맥 로고"
+              className="max-w-full h-auto max-h-48 object-contain"
+            />
+          </div>
+          
+          <div 
+            className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${activeSlide === 1 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          >
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/lmuUhRDlyrXsdAHq.jpeg"
+              alt="고품질 컴파운드 샘플"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
+            <button 
+              onClick={() => setActiveSlide(0)} 
+              className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === 0 ? 'bg-slate-800 w-8' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
+              aria-label="첫번째 이미지 보기"
+            ></button>
+            <button 
+              onClick={() => setActiveSlide(1)} 
+              className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === 1 ? 'bg-slate-800 w-8' : 'bg-slate-300 w-2.5 hover:bg-slate-400'}`}
+              aria-label="두번째 이미지 보기"
+            ></button>
+          </div>
         </div>
       </div>
     </div>
