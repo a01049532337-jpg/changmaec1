@@ -345,14 +345,12 @@ export default function Home() {
 </section>
 
       {/* Sustainability Section */}
-      <section id="sustainability" className="relative py-24 md:py-32 overflow-hidden">
-  {/* 바다 배경 이미지와 어두운 오버레이 */}
-  <div 
-    className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
-    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=2000&auto=format&fit=crop')" }}
-  >
-    <div className="absolute inset-0 bg-slate-900/80"></div>
-  </div>
+      <section 
+  id="sustainability" 
+  className="relative py-24 md:py-32 bg-cover bg-center overflow-hidden"
+  style={{ backgroundImage: "url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=2000&auto=format&fit=crop')" }}
+>
+  <div className="absolute inset-0 bg-slate-900/80 z-0"></div>
 
   <div className="container relative z-10 px-4 mx-auto max-w-7xl">
     <div className="text-center max-w-3xl mx-auto mb-20">
@@ -368,7 +366,6 @@ export default function Home() {
       </p>
     </div>
 
-    {/* 반투명 유리 질감 카드 (Glassmorphism) */}
     <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition-all duration-300 hover:bg-white/20">
         <h3 className="text-2xl font-bold text-white mb-4">탄소중립 실천</h3>
