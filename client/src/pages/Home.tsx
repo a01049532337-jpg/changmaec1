@@ -345,81 +345,68 @@ export default function Home() {
 </section>
 
       {/* Sustainability Section */}
-      <section id="sustainability" className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            지속가능경영
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-green-100 to-blue-100 rounded-lg h-80 flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/pYtJNSYKPyyBRpHm.png" 
-                alt="ESG 지속가능경영" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-6">
-                환경과 사회를 생각하는 기업
-              </h3>
-              <div className="space-y-4">
-                <div className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold mb-1">탄소 중립 달성</h4>
-                    <p className="text-gray-700 text-sm">2030년까지 탄소 중립 목표 추진</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold mb-1">폐기물 감량</h4>
-                    <p className="text-gray-700 text-sm">재생 플라스틱 활용으로 폐기물 최소화</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold mb-1">사회공헌</h4>
-                    <p className="text-gray-700 text-sm">지역사회 발전과 고용 창출에 기여</p>
-                  </div>
-                </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-bold mb-1">투명한 경영</h4>
-                    <p className="text-gray-700 text-sm">윤리 경영과 투명한 정보 공개</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="sustainability" className="relative py-24 md:py-32 overflow-hidden">
+  {/* 바다 배경 이미지와 어두운 오버레이 */}
+  <div 
+    className="absolute inset-0 z-0 bg-fixed bg-cover bg-center"
+    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=2000&auto=format&fit=crop')" }}
+  >
+    <div className="absolute inset-0 bg-slate-900/80"></div>
+  </div>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-blue-700 text-white">
-        <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            (주)창맥과 함께하세요
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            고품질 재생수지로 지속가능한 미래를 만드는 파트너
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact">
-              <Button className="bg-lime-400 text-blue-900 hover:bg-lime-500 text-lg px-8 py-6">
-                문의하기
-              </Button>
-            </a>
-            <a href="/about">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-3">
-                회사소개 보기
-              </Button>
-            </a>
-          </div>
-        </div>
-      </section>
+  <div className="container relative z-10 px-4 mx-auto max-w-7xl">
+    <div className="text-center max-w-3xl mx-auto mb-20">
+      <span className="text-slate-400 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
+        Sustainability
+      </span>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+        자원 순환으로 완성하는<br />
+        지속가능한 미래
+      </h2>
+      <p className="text-lg text-slate-300 font-medium leading-relaxed">
+        창맥은 폐플라스틱의 고부가 가치 자원화를 통해 탄소 배출을 절감하고, 차세대 친환경 공정 모델을 확립하여 사회적 책임을 다하고 있습니다.
+      </p>
+    </div>
+
+    {/* 반투명 유리 질감 카드 (Glassmorphism) */}
+    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition-all duration-300 hover:bg-white/20">
+        <h3 className="text-2xl font-bold text-white mb-4">탄소중립 실천</h3>
+        <p className="text-slate-300 leading-relaxed">
+          2025-2027 탄소중립 사업화 지원사업 선정 및 저탄소 공정 모델 확립을 통해 기후 위기 극복에 적극적으로 동참합니다.
+        </p>
+      </div>
+      
+      <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition-all duration-300 hover:bg-white/20">
+        <h3 className="text-2xl font-bold text-white mb-4">순환 자원화</h3>
+        <p className="text-slate-300 leading-relaxed">
+          화학적·기계적 재활용 기술을 결합하여 폐기물을 줄이고, 최적의 자원 순환 솔루션을 산업 전반에 제공합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* 하단 CTA (문의하기) 섹션 */}
+<section className="py-24 bg-white border-t border-slate-100 relative z-10">
+  <div className="container px-4 mx-auto max-w-4xl text-center">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-10 tracking-tight leading-tight">
+      최상의 품질로 귀사의 혁신을 지원합니다
+    </h2>
+    <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/contact">
+        <Button className="h-16 px-12 bg-slate-900 text-white hover:bg-slate-800 font-bold text-xl rounded-2xl transition-all shadow-xl hover:-translate-y-1">
+          견적 및 샘플 문의하기
+        </Button>
+      </a>
+      <a href="/products">
+        <Button variant="outline" className="h-16 px-12 border-slate-300 text-slate-700 hover:bg-slate-50 font-bold text-xl rounded-2xl transition-all hover:-translate-y-1">
+          제품 카탈로그 확인
+        </Button>
+      </a>
+    </div>
+  </div>
+</section>
       
       <Footer />
     </div>
