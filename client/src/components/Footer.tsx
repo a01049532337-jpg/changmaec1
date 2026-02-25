@@ -7,13 +7,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-slate-800/60 pb-12">
           
           {/* Company Info */}
-            <img 
-              src="/창맥.png" 
-              alt="CHANGMAEC Logo" 
-              className="h-10 w-auto object-contain"
-            />
+          <div className="space-y-6">
+            <div className="text-2xl font-extrabold text-white tracking-tight">
+              (주)창맥
+            </div>
             <p className="text-slate-400 leading-relaxed text-sm font-medium">
-              16년의 업력,고품질 재생수지 전문 제조 기업
+              고품질 재생수지 전문 제조 기업
             </p>
           </div>
 
