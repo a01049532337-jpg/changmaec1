@@ -151,42 +151,69 @@ export default function Home() {
 </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-24">
-        <div className="container">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            (주)창맥에 대해
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">
-                재생 플라스틱의 미래를 선도합니다
-              </h3>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                (주)창맥은 2010년 설립 이후 고품질의 재생 플라스틱 소재 제조에 특화된 기업입니다.
-                신소재 기술과 혁신적인 공정으로 지속가능한 순환경제 실현에 앞장서고 있습니다.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                <strong>주요 인증:</strong> 스마트공장 인증 확인서, ISO 9001 인증, 소재부품장비 전문기업 인정
-              </p>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                대기업의 친환경 제품 개발을 지원하며, 글로벌 표준의 품질을 제공합니다.
-              </p>
-              <a href="/about">
-                <Button className="bg-blue-700 hover:bg-blue-800">
-                  자세히 알아보기
-                </Button>
-              </a>
-            </div>
-            <div className="flex items-center justify-center p-8 bg-gray-50 rounded-xl">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/TXZUbWyeLOLNEyrb.png" 
-                alt="(주)창맥 로고" 
-                className="max-w-full h-auto max-h-64 object-contain"
-              />
-            </div>
+      <section id="about" className="py-24 md:py-32 bg-white overflow-hidden">
+  <div className="container px-4 mx-auto max-w-7xl">
+    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="order-2 lg:order-1">
+        <span className="text-blue-800 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">
+          About Changmac
+        </span>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-10 tracking-tight leading-tight">
+          창맥은 복합 기능을 구현한<br />
+          재생수지를 제조합니다
+        </h2>
+
+        <div className="space-y-5 mb-12">
+          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+            <p className="text-lg text-slate-800 font-bold tracking-tight">첨단 재활용 플라스틱 기술 개발</p>
+          </div>
+          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+            <p className="text-lg text-slate-800 font-bold tracking-tight">재활용 플라스틱 생산 공정 개발</p>
+          </div>
+          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+            <p className="text-lg text-slate-800 font-bold tracking-tight">복합기능 재활용 합성수지 생산</p>
+          </div>
+          <div className="flex items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <div className="w-2 h-2 bg-blue-600 rounded-full mr-4 flex-shrink-0"></div>
+            <p className="text-lg text-slate-800 font-bold tracking-tight">재활용소재 기반 B2C제품 개발 및 생산</p>
           </div>
         </div>
-      </section>
+
+        <div className="flex flex-wrap gap-3 mb-10">
+          <span className="px-4 py-2.5 bg-white border border-slate-200 text-slate-600 font-bold rounded-lg text-sm shadow-sm">
+            스마트공장 인증
+          </span>
+          <span className="px-4 py-2.5 bg-white border border-slate-200 text-slate-600 font-bold rounded-lg text-sm shadow-sm">
+            ISO 9001 인증
+          </span>
+          <span className="px-4 py-2.5 bg-white border border-slate-200 text-slate-600 font-bold rounded-lg text-sm shadow-sm">
+            소재부품장비 전문기업
+          </span>
+        </div>
+
+        <a href="/about" className="inline-block">
+          <Button className="h-14 px-8 bg-slate-900 text-white hover:bg-blue-700 font-bold text-lg rounded-xl transition-colors shadow-lg">
+            회사 소개 자세히 보기
+          </Button>
+        </a>
+      </div>
+
+      <div className="order-1 lg:order-2 relative">
+        <div className="absolute inset-0 bg-slate-100 rounded-3xl transform rotate-3 scale-105 -z-10 transition-transform hover:rotate-6 duration-500 border border-slate-200"></div>
+        <div className="bg-white p-12 rounded-3xl shadow-xl border border-slate-200 flex items-center justify-center min-h-[400px]">
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663320104260/TXZUbWyeLOLNEyrb.png"
+            alt="(주)창맥 로고"
+            className="max-w-full h-auto max-h-48 object-contain"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Products Section */}
       <section id="products" className="py-16 md:py-24 bg-gray-50">
