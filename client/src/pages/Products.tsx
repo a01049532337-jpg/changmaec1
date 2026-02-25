@@ -18,7 +18,7 @@ export default function Products() {
       image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=1600&auto=format&fit=crop",
       details: [
         "고부가 화학 첨가제 중합제",
-        "추, 해중합, 정, 중합의 화학적 재활용",
+        "추출, 해중합, 정제, 중합의 화학적 재활용",
         "다양한 산업 분야 적용 가능"
       ]
     },
