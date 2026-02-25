@@ -1,298 +1,228 @@
-import { TrendingUp, Award, Zap, Target, CheckCircle, ArrowRight, BarChart3 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { 
+  TrendingUp, PieChart, FileDown, ArrowUpRight, 
+  BarChart3, Globe2, Briefcase, Menu, CheckCircle2 
+} from "lucide-react";
+import { useState, useEffect } from "react";
+import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 export default function IR() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
+      title: "지속 가능한 성장을 향한 투자",
+      desc: "16년의 신뢰를 바탕으로 한 데이터 기반 품질 경영"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1554469384-e58fb162295a?q=80&w=2000&auto=format&fit=crop",
+      title: "탄소중립의 기술적 해답",
+      desc: "2025-2027 탄소중립 사업화 지원사업 공식 수행 기업"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2000&auto=format&fit=crop",
+      title: "순환경제의 새로운 기준",
+      desc: "화학적 재활용 기술로 구현하는 물성"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   const investmentHighlights = [
     {
-      title: "검증된 기술력",
-      description: "2건의 핵심 특허와 '소재·부품·장비 전문기업' 인증이 증명하는 독보적인 재생수지 배합 기술",
-      icon: Award,
-      color: "from-blue-50 to-blue-100"
+      title: "압도적 시장 점유율",
+      value: "PA6/PA66 전문",
+      desc: "자동차 엔진 및 가전 핵심 부품 공급망 확보",
+      icon: Briefcase
     },
     {
-      title: "미래 성장성",
-      description: "2025~2027 탄소중립 사업화 지원사업 선정을 통한 차세대 화학적 순환 자원화 기술 선점",
-      icon: TrendingUp,
-      color: "from-lime-50 to-lime-100"
+      title: "기술 경쟁력",
+      value: "ISO 9001 인증",
+      desc: "독자적인 연구소와 데이터 기반 품질 관리 체계",
+      icon: CheckCircle2
     },
     {
-      title: "안정적 인프라",
-      description: "스마트공장 시스템을 도입한 체계적인 제조 공정과 경북 정밀화학소재 네트워크 보유",
-      icon: Zap,
-      color: "from-blue-50 to-blue-100"
+      title: "미래 성장 가치",
+      value: "Net-Zero 선도",
+      desc: "화학적 재활용 원천 기술 및 특허 보유",
+      icon: TrendingUp
     }
-  ];
-
-  const certifications = [
-    { name: "ISO 9001", year: "2022", category: "품질경영", icon: "✓" },
-    { name: "소재·부품·장비 전문기업", year: "2022", category: "정부 인증", icon: "✓" },
-    { name: "스마트공장 확인서", year: "2022", category: "산업 4.0", icon: "✓" },
-    { name: "연구개발전담부서 인정", year: "2024", category: "R&D 역량", icon: "✓" }
-  ];
-
-  const businessCore = [
-    {
-      title: "① 재생수지 컴파운딩 기술",
-      description: "폐플라스틱을 고품질 재생 원료로 재탄생시키는 맞춤형 배합 기술",
-      details: [
-        "이축압출기(Twin-Screw Extruder)를 활용한 물성 최적화",
-        "신재(Virgin)급 품질 구현",
-        "PA6/PA66, PP, PC 전문 제조"
-      ]
-    },
-    {
-      title: "② 탄소소재 화학적 순환 자원화",
-      description: "단순 재활용을 넘어 화학적 공정을 통해 원료 상태로 되돌리는 고부가가치 자원화",
-      details: [
-        "화학적 순환 자원화 기술 (2023 개발 완료)",
-        "2025~2027 탄소중립 사업화 지원사업 추진",
-        "저탄소 공정 모델 확립"
-      ]
-    }
-  ];
-
-  const marketOpportunity = [
-    {
-      title: "글로벌 규제 대응",
-      description: "EU 탄소국경조정제도(CBAM) 및 플라스틱 재활용 의무화 정책에 따른 재생수지 수요 폭증"
-    },
-    {
-      title: "ESG 경영의 필수 파트너",
-      description: "탄소 배출권 확보를 위해 기업들이 '친환경 인증 소재'를 필수로 채택하는 흐름 속 핵심 공급망 역할"
-    }
-  ];
-
-  const futureVision = [
-    {
-      period: "2025-2027",
-      title: "탄소중립 공정 상용화",
-      description: "탄소중립 사업화 지원사업 완료 및 친환경 브랜드 입지 굳히기"
-    },
-    {
-      period: "2030 Beyond",
-      title: "자원 순환 토털 솔루션 기업",
-      description: "국내 최고 수준의 순환경제 리더로서의 입지 강화"
-    }
-  ];
-
-  const performanceMetrics = [
-    { label: "생산 효율 향상", value: "35%", color: "text-blue-700" },
-    { label: "품질 편차 감소", value: "50%", color: "text-lime-600" },
-    { label: "신재급 품질", value: "100%", color: "text-blue-700" },
-    { label: "보유 특허", value: "2건", color: "text-lime-600" }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
+      <SEO title="투자정보(IR)" description="(주)창맥의 재무 정보와 미래 성장 비전, 투자 하이라이트를 소개합니다." />
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
       {/* Navigation */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
-        <div className="container flex items-center justify-between h-16">
-          <a href="/" className="text-2xl font-bold text-blue-700">창맥</a>
-          <a href="/" className="text-blue-700 hover:text-blue-800">← 돌아가기</a>
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div className="container px-4 mx-auto max-w-7xl flex items-center justify-between h-20">
+          <a href="/" className="flex items-center">
+            <div className="text-2xl font-extrabold text-slate-900 tracking-tight">(주)창맥</div>
+          </a>
+          <div className="hidden md:flex gap-8 items-center font-bold text-sm">
+            <a href="/about" className="text-slate-500 hover:text-slate-900 transition-colors">회사소개</a>
+            <a href="/products" className="text-slate-500 hover:text-slate-900 transition-colors">사업소개</a>
+            <a href="/sustainability" className="text-slate-500 hover:text-slate-900 transition-colors">지속가능경영</a>
+            <a href="/ir" className="text-slate-900">IR</a>
+            <a href="#careers" className="text-slate-500 hover:text-slate-900 transition-colors">채용공고</a>
+          </div>
+          <button onClick={() => setSidebarOpen(true)} className="md:hidden p-2 text-slate-600"><Menu className="w-6 h-6" /></button>
+          <a href="mailto:changmaec1@naver.com" className="hidden md:block">
+            <Button className="bg-slate-900 text-white font-bold px-6 rounded-xl">문의하기</Button>
+          </a>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-700 to-blue-900 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-lime-400 rounded-full blur-3xl"></div>
-        </div>
-        <div className="container relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-4">미래를 향한 순환 경제의 리더</h1>
-            <p className="text-xl opacity-90 mb-2">16년의 업력과 탄소중립 기술로 완성하는</p>
-            <p className="text-2xl font-semibold text-lime-300">Plastic Round-Trip</p>
+      {/* Hero Slider Section */}
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        {slides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              idx === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-110"
+            }`}
+          >
+            <div className="absolute inset-0 bg-slate-900/60 z-10" />
+            <img src={slide.image} className="w-full h-full object-cover transform transition-transform duration-[5000ms] scale-110" />
+            <div className="absolute inset-0 z-20 flex items-center justify-center">
+              <div className="text-center px-4">
+                <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-lg">
+                  {slide.title}
+                </h1>
+                <p className="text-xl text-slate-200 font-medium drop-shadow-md">
+                  {slide.desc}
+                </p>
+              </div>
+            </div>
           </div>
+        ))}
+        {/* Slider Indicators */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+          {slides.map((_, idx) => (
+            <div
+              key={idx}
+              className={`h-1.5 transition-all duration-300 rounded-full ${
+                idx === currentSlide ? "w-10 bg-white" : "w-2 bg-white/30"
+              }`}
+            />
+          ))}
         </div>
       </section>
 
       {/* Investment Highlights */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">Investment Highlights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-24 bg-white">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+              <span className="text-slate-500 font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Highlights</span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">창맥의 핵심 가치</h2>
+            </div>
+            <p className="text-slate-500 font-medium max-w-md mt-4 md:mt-0">
+              안정적인 사업 기반과 독보적인 기술력을 바탕으로 재생 플라스틱 시장의 새로운 패러다임을 제시합니다.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
             {investmentHighlights.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div key={idx} className={`bg-gradient-to-br ${item.color} rounded-xl p-8 shadow-lg hover:shadow-xl transition`}>
-                  <Icon className="w-12 h-12 text-blue-700 mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{item.description}</p>
-                </div>
+                <Card key={idx} className="p-10 border border-slate-100 shadow-sm hover:shadow-xl transition-all rounded-3xl">
+                  <div className="w-12 h-12 bg-slate-50 text-slate-900 rounded-xl flex items-center justify-center mb-8 border border-slate-100">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h4 className="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">{item.title}</h4>
+                  <h3 className="text-2xl font-black text-slate-900 mb-4">{item.value}</h3>
+                  <p className="text-slate-600 font-medium text-sm leading-relaxed">{item.desc}</p>
+                </Card>
               );
             })}
           </div>
         </div>
       </section>
 
-
-
-      {/* Certifications & Awards */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">인증 및 수상</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {certifications.map((cert, idx) => (
-              <div key={idx} className="bg-white border-2 border-blue-200 rounded-lg p-6 text-center hover:border-lime-400 hover:shadow-lg transition">
-                <div className="text-4xl font-bold text-lime-500 mb-3">{cert.icon}</div>
-                <div className="text-sm text-blue-700 font-bold mb-2">{cert.year}</div>
-                <h3 className="font-bold text-gray-900 mb-1 text-sm">{cert.name}</h3>
-                <p className="text-xs text-gray-600">{cert.category}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* High-Quality Pellets Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6">고품질 재생수지 펠릿</h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                (주)창맥의 화학적 순환 자원화 기술로 만들어진 재생수지 펠릿은 신재(Virgin) 수준의 물성을 자랑합니다. 
-                PA6/PA66, PP, PC 등 다양한 소재를 고객사의 요구에 맞게 맞춤 제조하며, 글로벌 자동차 및 가전 산업의 
-                엄격한 품질 기준을 충족합니다.
+      {/* Financial Summary Preview */}
+      <section className="py-24 bg-slate-50">
+        <div className="container px-4 mx-auto max-w-7xl">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
+                안정적인 재무 성과와<br />투명한 공정 관리
+              </h2>
+              <p className="text-slate-600 font-medium leading-relaxed">
+                창맥은 16년의 업력 동안 스마트공장 도입과 연구개발 투자를 통해 효율적인 생산 원가를 달성했습니다. 탄소중립 신사업을 통해 새로운 수익 구조를 창출하고 있습니다.
               </p>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">신재급 물성 보증 (Virgin Grade Quality)</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">ISO 9001 품질 관리 시스템</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">맞춤형 배합 기술 (Custom Compounding)</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">친환경 인증 소재 (GRS 대비)</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-lime-500 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">스마트공장 기술 기반 생산</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://private-us-east-1.manuscdn.com/sessionFile/x3J7qhmfKNtJ15WezGjR6C/sandbox/bv8yk1EQEBod6yuuWhFTnh-img-2_1770092556000_na1fn_cmVjeWNsZWQtcGxhc3RpYy1wZWxsZXRz.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUveDNKN3FobWZLTnRKMTVXZXpHalI2Qy9zYW5kYm94L2J2OHlrMUVRRUJvZDZ5dXVXaEZUbmgtaW1nLTJfMTc3MDA5MjU1NjAwMF9uYTFmbl9jbVZqZVdOc1pXUXRjR3hoYzNScFl5MXdaV3hzWlhSei5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=MqUuQwdV7JiFVtIM3FX--7JEPnGPtdafFZdbA8rVM6NiEyyMyk7TQsqODdrVD~8o~GxFn8cni92hM4QtOrLrdQRG08v-rXrV4NhxHRQg2B286Lq8YkJHijNY01E8VDlYa0yzZUZ1jge1NL8OlGEC5fuR4PsaQ15BRlNVrFbhssaWiaeE7EkTJOujEFc0qty2VLM27x6Ps7zoNUa~tkK7cJ-Rk8BcUuwEhSZqkoNNDdWOrZXppYNQ42y2Qorh6iiTClanNSLDAPLs0GwUrf3uNpXXaR0nPqZnyl5nwhxdHlwZbZH52IaiWMHS-gas0aycyunqTYVbwKfY4mJ2PdnqEg__" 
-                alt="Recycled Plastic Pellets" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="p-6 bg-gradient-to-r from-blue-50 to-lime-50">
-                <p className="text-sm text-gray-600 font-semibold">신재급 품질의 재생수지 펠릿</p>
-                <p className="text-xs text-gray-500 mt-1">화학적 순환 자원화 기술로 완성된 고품질 컴파운드</p>
+              <div className="flex gap-4">
+                <Button className="bg-slate-900 text-white font-bold h-14 px-8 rounded-2xl flex items-center gap-2">
+                  <FileDown className="w-5 h-5" /> 재무보고서 다운로드
+                </Button>
+                <Button variant="outline" className="border-slate-200 h-14 px-8 rounded-2xl font-bold">
+                  자세히 보기
+                </Button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Core */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">Business Core</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {businessCore.map((item, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-8 border-2 border-blue-200 shadow-lg hover:shadow-xl transition">
-                <h3 className="text-2xl font-bold text-blue-700 mb-3">{item.title}</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed">{item.description}</p>
-                <ul className="space-y-3">
-                  {item.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <ArrowRight className="w-5 h-5 text-lime-500 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+            <div className="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-slate-100">
+              <div className="flex items-center justify-between mb-10">
+                <h3 className="text-xl font-bold text-slate-900">주요 경영 지표</h3>
+                <span className="text-slate-400 font-bold text-xs uppercase tracking-widest">Year: 2024-2027</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Market Opportunity */}
-      <section className="py-20">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">Market Opportunity</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {marketOpportunity.map((item, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-blue-50 to-lime-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition border-l-4 border-blue-700">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">{item.title}</h3>
-                <p className="text-gray-700 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* R&D & Certification */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">R&D & Certification</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">연구소 중심 경영</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                2024년 인정받은 '연구개발전담부서'를 통해 고객사 맞춤형 신소재 개발 역량을 지속적으로 강화하고 있습니다. 
-                PA6/PA66, PP, PC 등 다양한 소재의 특성을 극대화하는 배합 기술 개발에 투자하고 있습니다.
-              </p>
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-2 font-semibold">보유 특허</p>
-                <p className="text-3xl font-bold text-blue-700">2건</p>
-                <p className="text-xs text-gray-600 mt-2">특허번호: 10-2021-0165852, 10-2014-0027148</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg border-2 border-lime-400">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">대외 공신력</h3>
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                ISO 9001, 소부장 전문기업, 스마트공장 확인서 등 정량적 지표를 통해 기술력과 경영 능력을 입증합니다. 
-                국제 품질 기준을 충족하며 정부 인증을 획득한 신뢰할 수 있는 파트너입니다.
-              </p>
-              <div className="bg-gradient-to-r from-lime-50 to-lime-100 rounded-lg p-4">
-                <p className="text-sm text-gray-600 mb-2 font-semibold">주요 인증</p>
-                <p className="text-3xl font-bold text-lime-600">4개</p>
-                <p className="text-xs text-gray-600 mt-2">ISO 9001, 소재부품장비 전문기업, 스마트공장, R&D전담부서</p>
+              <div className="space-y-8">
+                <div>
+                  <div className="flex justify-between mb-3 text-sm font-bold">
+                    <span className="text-slate-500">탄소중립 기술 투자율</span>
+                    <span className="text-slate-900">35% Increase</span>
+                  </div>
+                  <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-slate-900 w-[35%] rounded-full" />
+                  </div>
+                </div>
+                <div>
+                  <div className="flex justify-between mb-3 text-sm font-bold">
+                    <span className="text-slate-500">생산 공정 자동화율</span>
+                    <span className="text-slate-900">80% Reached</span>
+                  </div>
+                  <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-slate-400 w-[80%] rounded-full" />
+                  </div>
+                </div>
+                <div className="pt-6 border-t border-slate-50 flex items-center gap-4">
+                  <PieChart className="w-10 h-10 text-slate-200" />
+                  <p className="text-xs text-slate-500 font-medium leading-relaxed">
+                    * 탄소중립 사업화 지원사업 수행 결과에 따른 기술 고도화 지표를 포함한 예측치입니다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Future Vision */}
-      <section className="py-20 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-16 text-center">Future Vision</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {futureVision.map((item, idx) => (
-              <div key={idx} className="bg-white bg-opacity-10 backdrop-blur rounded-xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition">
-                <div className="text-lime-300 font-bold text-lg mb-3">{item.period}</div>
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-white opacity-90 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">투자 문의</h2>
-          <p className="text-xl text-gray-700 mb-12">
-            (주)창맥의 성장 스토리에 함께하세요
+      {/* IR Contact Banner */}
+      <section className="py-24 bg-white border-t border-slate-100">
+        <div className="container px-4 mx-auto max-w-4xl text-center">
+          <Globe2 className="w-16 h-16 text-slate-200 mx-auto mb-8" />
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">창맥의 성장에 함께하십시오</h2>
+          <p className="text-lg text-slate-600 mb-10 font-medium leading-relaxed">
+            재무 및 IR 관련 궁금하신 사항은 담당 부서에서<br className="hidden md:block" /> 신속하고 상세하게 안내해 드리겠습니다.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:changmaec1@naver.com" className="bg-lime-400 text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-lime-300 transition text-lg shadow-lg">
-              이메일 문의
-            </a>
-            <a href="tel:054-931-0718" className="border-2 border-blue-700 text-blue-700 px-8 py-4 rounded-lg font-bold hover:bg-blue-700 hover:text-white transition text-lg">
-              전화 문의: 054-931-0718
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <div className="px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold flex items-center gap-3">
+              <span className="text-slate-400">IR 문의</span>
+              <span>054-931-0718</span>
+            </div>
+            <a href="mailto:changmaec1@naver.com">
+              <Button className="h-16 px-10 rounded-2xl border-2 border-slate-900 bg-white text-slate-900 hover:bg-slate-900 hover:text-white transition-all font-black text-lg">
+                이메일 문의하기 <ArrowUpRight className="ml-2 w-5 h-5" />
+              </Button>
             </a>
           </div>
         </div>
