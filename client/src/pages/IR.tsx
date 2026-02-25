@@ -13,6 +13,7 @@ export default function IR() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // 웅장한 느낌의 B2B 슬라이드 테마
   const slides = [
     {
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
@@ -35,6 +36,7 @@ export default function IR() {
     return () => clearInterval(timer);
   }, []);
 
+  // 요청하신 핵심 하이라이트 데이터
   const investmentHighlights = [
     {
       title: "압도적 시장 점유율",
