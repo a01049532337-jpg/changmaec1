@@ -76,6 +76,13 @@ export default function Products() {
     { step: "06", title: "품질 검사 및 포장", description: "엄격한 품질 기준에 따라 검사하고 안전하게 포장하여 납품" }
   ];
 
+  const customizationOptions = [
+    { title: "용도별 물성 설계", description: "고강도, 고인성, 내열성 등 용도별 최적화" },
+    { title: "전용 컬러 커스터마이징", description: "고객사 브랜드 고유 컬러 완벽 구현" },
+    { title: "기능성 첨가제 처방", description: "UV차단기능 추가" },
+    { title: "혼합 비율 최적화", description: "경제성과 성능을 고려한 최적의 배합비 제공" }
+  ];
+
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <SEO title="사업소개" description="(주)창맥의 핵심 기술과 9종의 제품 라인업을 소개합니다." />
@@ -188,6 +195,24 @@ export default function Products() {
                 <span className="block text-3xl font-black text-slate-200 group-hover:text-slate-800 mb-4 transition-colors">{flow.step}</span>
                 <h4 className="text-sm font-bold text-slate-900 group-hover:text-white mb-2 transition-colors">{flow.title}</h4>
                 <p className="text-[11px] text-slate-500 group-hover:text-slate-400 leading-tight transition-colors">{flow.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-slate-50">
+        <div className="container px-4 mx-auto max-w-7xl text-center">
+          <div className="mb-16">
+            <span className="text-slate-500 font-bold tracking-[0.2em] text-sm uppercase mb-4 block">Customized Solution</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">맞춤형 솔루션</h2>
+          </div>
+          <div className="grid md:grid-cols-4 gap-6">
+            {customizationOptions.map((opt, idx) => (
+              <div key={idx} className="p-8 bg-white rounded-3xl border border-slate-100 hover:-translate-y-2 transition-all shadow-sm">
+                <Layers className="w-8 h-8 text-slate-200 mx-auto mb-6" />
+                <h4 className="text-lg font-bold text-slate-900 mb-3">{opt.title}</h4>
+                <p className="text-xs text-slate-500 font-medium leading-relaxed">{opt.description}</p>
               </div>
             ))}
           </div>
