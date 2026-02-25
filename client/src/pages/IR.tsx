@@ -17,7 +17,7 @@ export default function IR() {
     {
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop",
       title: "Sustainable Growth",
-      subtitle: "미래를 향한 순환 경제의 리더",
+      subtitle: "지속가능한 제조 환경을 위한 최적의 컴파운딩 파트너",
       desc: "16년의 업력과 탄소중립 기술로 완성하는 Plastic Round-Trip"
     },
     {
@@ -45,7 +45,7 @@ export default function IR() {
     {
       title: "기술 경쟁력",
       value: "ISO 9001 인증",
-      desc: "독자적인 연구소와 데이터 기반 품질 관리 체계",
+      desc: "연구소와 데이터 기반 품질 관리 체계",
       icon: CheckCircle2
     },
     {
@@ -59,7 +59,7 @@ export default function IR() {
   const certifications = [
     { name: "ISO 9001", year: "2022", category: "품질경영" },
     { name: "소부장 전문기업", year: "2022", category: "정부 인증" },
-    { name: "스마트공장 확인서", year: "2022", category: "산업 4.0" },
+    { name: "스마트공장 확인서", year: "2022", category: "산업" },
     { name: "연구개발전담부서", year: "2024", category: "R&D 역량" }
   ];
 
