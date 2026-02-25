@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Send, Menu, Clock, MessageSquare, ShieldCheck } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Menu } from "lucide-react";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
@@ -50,58 +50,23 @@ export default function Contact() {
       </nav>
 
       {/* Hero Section with Company Image */}
-      <section className="relative h-[50vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative h-[75vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="/창맥전경.jpg" 
             alt="창맥 전경" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-slate-900/70" />
+          <div className="absolute inset-0 bg-slate-900/50" />
         </div>
-        <div className="container px-4 mx-auto max-w-7xl relative z-10 text-center">
+        <div className="container px-4 mx-auto max-w-7xl relative z-10 text-center pt-20">
           <span className="text-lime-400 font-bold tracking-[0.3em] text-xs uppercase mb-4 block">Get in Touch</span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
-            성공적인 비즈니스를 위한<br />확실한 소재 파트너
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight leading-tight">
+            고객사의 ESG 가치를 실현하는 파트너
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto font-medium">
+          <p className="text-lg text-slate-200 max-w-2xl mx-auto font-medium">
             (주)창맥의 전문가들이 귀사의 요구사항에 최적화된 배합 솔루션을 제안합니다.
           </p>
-        </div>
-      </section>
-
-      {/* slick 레이아웃: Consultation Steps */}
-      <section className="py-12 bg-slate-50 border-b border-slate-200">
-        <div className="container px-4 mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-slate-900 transition-all">
-                <MessageSquare className="w-6 h-6 text-slate-400 group-hover:text-white" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 01</p>
-                <p className="text-sm font-bold text-slate-900">신속한 문의 접수</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-slate-900 transition-all">
-                <ShieldCheck className="w-6 h-6 text-slate-400 group-hover:text-white" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 02</p>
-                <p className="text-sm font-bold text-slate-900">전문 연구원 기술 검토</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 group">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:bg-slate-900 transition-all">
-                <Clock className="w-6 h-6 text-slate-400 group-hover:text-white" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider">Step 03</p>
-                <p className="text-sm font-bold text-slate-900">24시간 내 전문 답변</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
