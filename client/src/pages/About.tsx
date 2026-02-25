@@ -292,17 +292,18 @@ export default function About() {
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2 h-[400px] bg-slate-100 rounded-3xl overflow-hidden relative border border-slate-200">
               <iframe
-    src="https://maps.google.com/maps?q=경상북도%20성주군%20선남면%20선노로%2055-36&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen={true}
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    title="창맥 본사 위치"
-    className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
-  ></iframe>
-</div>      
+                src="https://maps.app.goo.gl/ixpNV3NDsvjr5HXz6"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="창맥 본사 위치"
+                className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+              ></iframe>
+            </div>
+            
             <div className="space-y-8 flex flex-col justify-center">
               <div className="flex items-start">
                 <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center flex-shrink-0 mr-4 border border-slate-100">
