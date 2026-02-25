@@ -20,30 +20,38 @@ export default function Home() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-40 bg-white border-b border-gray-200">
-        <div className="container flex items-center justify-between h-16">
-          <div className="text-2xl font-bold text-blue-700">(주)창맥</div>
+      <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div className="container px-4 mx-auto max-w-7xl flex items-center justify-between h-20">
+          <a href="/" className="flex items-center">
+            <img 
+              src="/창맥.png" 
+              alt="CHANGMAEC Logo" 
+              className="h-8 md:h-10 w-auto object-contain"
+            />
+          </a>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-8">
-            <a href="/about" className="text-gray-700 hover:text-blue-700 transition">회사소개</a>
-            <a href="/products" className="text-gray-700 hover:text-blue-700 transition">사업소개</a>
-            <a href="/sustainability" className="text-gray-700 hover:text-blue-700 transition">지속가능경영</a>
-            <a href="/ir" className="text-gray-700 hover:text-blue-700 transition">IR</a>
-            <a href="#careers" className="text-gray-700 hover:text-blue-700 transition">채용공고</a>
+          <div className="hidden md:flex gap-8 items-center">
+            <a href="/about" className="text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors">회사소개</a>
+            <a href="/products" className="text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors">사업소개</a>
+            <a href="/sustainability" className="text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors">지속가능경영</a>
+            <a href="/ir" className="text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors">IR</a>
+            <a href="#careers" className="text-sm font-bold text-slate-600 hover:text-slate-900 transition-colors">채용공고</a>
           </div>
 
           {/* Mobile Hamburger Menu */}
           <button
             onClick={() => setSidebarOpen(true)}
-            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition"
+            className="md:hidden p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
           >
-            <Menu className="w-6 h-6 text-gray-700" />
+            <Menu className="w-6 h-6" />
           </button>
 
           {/* Desktop CTA Button */}
-          <a href="mailto:changmaec1@naver.com">
-            <Button className="hidden md:block bg-blue-700 hover:bg-blue-800">문의하기</Button>
+          <a href="mailto:changmaec1@naver.com" className="hidden md:block">
+            <Button className="bg-slate-900 text-white hover:bg-slate-800 font-bold px-6 rounded-xl transition-all shadow-md">
+              문의하기
+            </Button>
           </a>
         </div>
       </nav>
