@@ -10,7 +10,7 @@ export default function Footer() {
             <img 
               src="/창맥.png" 
               alt="CHANGMAEC Logo" 
-              className="h-10 w-auto object-contain brightness-0 invert opacity-90"
+              className="h-10 w-auto object-contain"
             />
             <p className="text-slate-400 leading-relaxed text-sm font-medium">
               16년의 업력,고품질 재생수지 전문 제조 기업
